@@ -42,4 +42,9 @@ You could use some inspiration from some of these works.
 
 https://www.quora.com/How-can-we-find-the-longest-continuous-subsequence-of-0s-in-binary-representation-of-an-integer-in-O-log-n-time-complexity
 
+###Part C
+
+For finding if a toss is fair or not, you need to assert the fact that probability of getting 6 tosses in a row for every 1000 tosses needs to be 1. If you cannot assert this factor then your toss needs to be unfair. Generate a binomial representation for the same to assert this mathematical logic.
+
+More information to solve using binomial distribution: http://onlinestatbook.com/2/probability/binomial.html
 
