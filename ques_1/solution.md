@@ -12,3 +12,18 @@ We could have `{HHH,HHT, HTH, HTT, THH, THT, TTH, TTT}` possible combinations.
 - If you need to generate random sequence it is easy pick a number from `0` to `2^n - 1` using random function generator and use the obtained number to generate the sequence.
 - Consider your n = 3, random function would pick between 0 and 7.
 
+Ideally a functional implementation of a random sequence generator in C would be:
+
+`
+char* generate_rand_seq(int n) {
+  
+  char *seq = (char*) malloc(n+1); //to avoid memory leaks
+  int limit = pow(2,n);
+  int rand_val = rand(limit); //generates a value between 0 and 2^n
+  for(int i=0;i < n;i++) {
+    seq[i] = ((rand_val>>i)&1)? 'T' : 'H';
+  }
+  seq[i] = '\0';
+  return seq;
+}
+`
