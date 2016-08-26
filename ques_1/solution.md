@@ -14,16 +14,23 @@ We could have `{HHH,HHT, HTH, HTT, THH, THT, TTH, TTT}` possible combinations.
 
 Ideally a functional implementation of a random sequence generator in C would be:
 
-`
+``` C
 char* generate_rand_seq(int n) {
   
   char *seq = (char*) malloc(n+1); //to avoid memory leaks
+
   int limit = pow(2,n);
+
   int rand_val = rand(limit); //generates a value between 0 and 2^n
+
   for(int i=0;i < n;i++) {
+
     seq[i] = ((rand_val>>i)&1)? 'T' : 'H';
   }
+
   seq[i] = '\0';
+
   return seq;
+
 }
-`
+```
