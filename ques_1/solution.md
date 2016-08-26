@@ -34,3 +34,12 @@ char* generate_rand_seq(int n) {
 
 }
 ```
+
+###Part B
+
+Solving the part B requires the processing of longest possible continuous sequence in a list. 
+You could use some inspiration from some of these works.
+
+https://www.quora.com/How-can-we-find-the-longest-continuous-subsequence-of-0s-in-binary-representation-of-an-integer-in-O-log-n-time-complexity
+
+
